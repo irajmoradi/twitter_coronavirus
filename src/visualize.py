@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+import matplotlib
+import numpy as np
+matplotlib.use('Agg')
 
+import matplotlib.pyplot as plt
 # command line args
 import argparse
 parser = argparse.ArgumentParser()
@@ -21,8 +25,31 @@ with open(args.input_path) as f:
 if args.percent:
     for k in counts[args.key]:
         counts[args.key][k] /= counts['_all'][k]
-
+z =0
+list1 = []
+list2 = []
 # print the count values
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
 for k,v in items:
-    print(k,':',v)
+#    print(k,':',v)
+    z += 1
+    if z < 12:
+        list1.append(k)
+        list2.append(v)
+n = len(list1)
+ind = np.arange(n)
+if "country" in str(args.input_path):
+    strx = "Country"
+else:
+    strx = "Language"
+p1 = plt.bar(ind, list2, .5)
+plt.ylabel('# of Tweets')
+plt.xticks(ind, list1)
+plt.xlabel(strx)
+strkey = str(args.key)
+
+#plt.yticks(np.arange(0, max(v), 10))
+#print(args.key)
+#print("strtitle=", strtitle)
+filename = strx + strkey + ".png"
+plt.savefig(filename, bbox_inches = "tight")
