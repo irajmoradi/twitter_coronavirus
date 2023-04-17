@@ -1,52 +1,15 @@
-# Coronavirus twitter analysis
-
-You will scan all geotagged tweets sent in 2020 to monitor for the spread of the coronavirus on social media.
-
-**Learning Objectives:**
+#Map Reduce Class Project
+This was a project for my Data Structures class at Claremont McKenna College. This project involved analysis of millions of tweets using MapReduce techniques. Utilizing both Shell scripts and Python code I parsed through all geotagged tweets in 2020, and created figures about the country and language for tweets containing certain hashtags related to the Coronavirus of 2020.
 
 1. work with large scale datasets
 1. work with multilingual text
 1. use the MapReduce divide-and-conquer paradigm to create parallel code
 
-## Background
+## Procedure 
 
-**About the Data:**
+Four python programs were utilized in this data analysis. Map.py looks through all files passed into it, which for the project being all geotagged tweets in 2020, searchs for hashtags, then calculates the origin country and language of the tweets with the hashtags.
+Reduce.py takes multiple files, the output files of Map.py, and combines them into one file. Visualize.py then charts the amount of tweets with a given hashtag by country or language, using the file produced by reduce.py.  
 
-Approximately 500 million tweets are sent everyday.
-Of those tweets, about 2% are *geotagged*.
-That is, the user's device includes location information about where the tweets were sent from.
-The lambda server's `/data/Twitter dataset` folder contains all geotagged tweets that were sent in 2020.
-In total, there are about 1.1 billion tweets in this dataset.
-
-The tweets are stored as follows.
-The tweets for each day are stored in a zip file `geoTwitterYY-MM-DD.zip`,
-and inside this zip file are 24 text files, one for each hour of the day.
-Each text file contains a single tweet per line in JSON format.
-JSON is a popular format for storing data that is closely related to python dictionaries.
-
-Vim is able to open compressed zip files,
-and I encourage you to use vim to explore the dataset.
-For example, run the command
-```
-$ vim /data/Twitter\ dataset/geoTwitter20-01-01.zip
-```
-Or you can get a "pretty printed" interface with a command like
-```
-$ unzip -p /data/Twitter\ dataset/geoTwitter20-01-01.zip | head -n1 | python3 -m json.tool | vim -
-```
-
-**About MapReduce:**
-
-You will follow the [MapReduce](https://en.wikipedia.org/wiki/MapReduce) procedure to analyze these tweets.
-MapReduce is a famous procedure for large scale parallel processing that is widely used in industry.
-It is a 3 step procedure summarized in the following image:
-
-<img src=mapreduce.png width=100% />
-
-I have already done the partition step for you (by splitting up the tweets into one file per day).
-You will have to do the map and reduce steps.
-
-**MapReduce Runtime:**
 
 <img src=Country%23코로나바이러스.png width=100% />
 <img src=Language%23코로나바이러스.png width=100% />
