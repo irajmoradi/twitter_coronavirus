@@ -48,7 +48,10 @@ You will have to do the map and reduce steps.
 
 **MapReduce Runtime:**
 
+<img src=Country%23코로나바이러스.png width=100% />
 <img src=Language%23코로나바이러스.png width=100% />
+<img src=Country%23coronavirus.png width=100% />
+<img src=Language%23coronavirus.png width=100% />
 Let $n$ be the size of the dataset and $p$ be the number of processors used to do the computation.
 The simplest and most common scenario is that the map procedure takes time $O(n)$ and the reduce procedure takes time $O(1)$.
 (These will be the runtimes of our map/reduce procedures.)
