@@ -8,15 +8,26 @@ This was a project for my Data Structures class at Claremont McKenna College. Th
 
 ## Procedure 
 
-Four python programs were utilized in this data analysis. Map.py looks through all files passed into it, which for the project being all geotagged tweets in 2020, searchs for hashtags, then calculates the origin country and language of the tweets with the hashtags.
-Reduce.py takes multiple files, the output files of Map.py, and combines them into one file. Visualize.py then charts the amount of tweets with a given hashtag by country or language, using the file produced by reduce.py.  
-
+Four Python programs were utilized in this data analysis. `map.py` looks through all files passed into it, which for the project being all geotagged tweets in 2020, searchs for hashtags, then calculates the origin country and language of the tweets with the hashtags.
+`reduce.py` takes multiple files, the output files of `map.py`, and combines them into one file. `visualize.py` then charts the amount of tweets with a given hashtag by country or language, using the file produced by `reduce.py`. 
+These three programs generated the four following figures:
+ 
 
 <img src=Country%23코로나바이러스.png width=100% />
+Figure 1: # of Tweets in 2020 with the hashtag #코로나바이러스 by country of origin
 <img src=Language%23코로나바이러스.png width=100% />
+Figure 2: # of Tweets in 2020 with the hashtag #코로나바이러스 by language of origin
 <img src=Country%23coronavirus.png width=100% />
+Figure 3: # of Tweets in 2020 with the hashtag #coronavirus by country of origin
 <img src=Language%23coronavirus.png width=100% />
+Figure 4: # of Tweets in 2020 with the hashtag #coronavirus by language of origin
+
+
+The fourth program `alternative_reduce.py` takes all the files produced by map.py, and creates the following line chart using similar code to `reduce.py` and `visualize.py`. 
 <img src=hi.png width=100% />
+
+
+
 Let $n$ be the size of the dataset and $p$ be the number of processors used to do the computation.
 The simplest and most common scenario is that the map procedure takes time $O(n)$ and the reduce procedure takes time $O(1)$.
 (These will be the runtimes of our map/reduce procedures.)
