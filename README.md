@@ -12,16 +12,16 @@ Four Python programs were utilized in this data analysis. `map.py` looks through
 `reduce.py` takes multiple files, the output files of `map.py`, and combines them into one file. `visualize.py` then charts the amount of tweets with a given hashtag by country or language, using the file produced by `reduce.py`. 
 These three programs generated the four following figures:
  
-### Figure 1: \# of Tweets in 2020 with the hashtag \#코로나바이러스 by country of origin
+Figure 1: # of Tweets in 2020 with the hashtag #코로나바이러스 by country of origin
 <img src=Country%23코로나바이러스.png width=100% />
 <br/><br/>
-### Figure 2: \# of Tweets in 2020 with the hashtag \#코로나바이러스 by language of origin
+Figure 2: # of Tweets in 2020 with the hashtag #코로나바이러스 by language of origin
 <img src=Language%23코로나바이러스.png width=100% />
 <br/><br/>
-### Figure 3: \# of Tweets in 2020 with the hashtag \#coronavirus by country of origin
+Figure 3: # of Tweets in 2020 with the hashtag #coronavirus by country of origin
 <img src=Country%23coronavirus.png width=100% />
 <br/><br/>
-### Figure 4: \# of Tweets in 2020 with the hashtag \#coronavirus by language of origin
+Figure 4: # of Tweets in 2020 with the hashtag #coronavirus by language of origin
 <img src=Language%23coronavirus.png width=100% />
 <br/><br/>
 
