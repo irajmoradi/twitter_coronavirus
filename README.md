@@ -1,4 +1,4 @@
-#Map Reduce Class Project
+# Map Reduce Class Project
 
 This was a project for my Data Structures class at Claremont McKenna College. This project involved analysis of millions of tweets using MapReduce techniques. Utilizing both Shell scripts and Python code I parsed through all geotagged tweets in 2020, and created figures about the country and language for tweets containing certain hashtags related to the Coronavirus of 2020.
 
