@@ -15,13 +15,16 @@ These three programs generated the four following figures:
 
 <img src=Country%23코로나바이러스.png width=100% />
 Figure 1: # of Tweets in 2020 with the hashtag #코로나바이러스 by country of origin
+<br/><br/>
 <img src=Language%23코로나바이러스.png width=100% />
 Figure 2: # of Tweets in 2020 with the hashtag #코로나바이러스 by language of origin
+<br/><br/>
 <img src=Country%23coronavirus.png width=100% />
 Figure 3: # of Tweets in 2020 with the hashtag #coronavirus by country of origin
+<br/><br/>
 <img src=Language%23coronavirus.png width=100% />
 Figure 4: # of Tweets in 2020 with the hashtag #coronavirus by language of origin
-
+<br/><br/>
 
 The fourth program `alternative_reduce.py` takes all the files produced by map.py, and creates the following line chart using similar code to `reduce.py` and `visualize.py`. 
 <img src=hi.png width=100% />
